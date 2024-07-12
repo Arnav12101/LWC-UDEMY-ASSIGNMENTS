@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Second assignment">
+        <div>
+            <p>CITY -> {city_name}</p>
+            <p>TEMPRATURE -> {temprature}</p>
+            <p>WEATHER -> {weather}</p>
+        </div>
+
+        <br>
+
+        <div>
+            <img src='https://media.istockphoto.com/id/854904700/photo/bad-cat-licked-all-cream.jpg?s=1024x1024&w=is&k=20&c=qTH_56WAdoeY3WSLGm6J49Wh74bO3_dtkG8ODXdkkYY=' height="100px" width="99px"/>
+            <p><b>Name: {fullName}</b></p>
+            <p><b>Job Title: {job_title}</b></p>
+        </div>
+
+        <br>
+
+        <template for:each={books} for:item = 'book'>
+            <div key={book.id}>
+                <p>{book.title}</p>
+                <p>{book.author}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="First Assignment">
+        <p>My name -> {myName}</p>
+        <p>My favorite language -> {myFavoriteLanguage}</p>
+
+        <div>
+            <lightning-input label = "Username" onchange={onChangeHandlerusername}></lightning-input>
+            <div>
+                <!-- <p>The username is : {username}</p> -->    
+            </div>
+                
+        <div>
+            
+        </div>
+            <lightning-input label = "Password" onchange={onChangeHandlerPass}></lightning-input>
+            <div>
+                <!-- <p>The password is : {pswrd}</p> -->
+            </div>
+        </div>
+
+        <lightning-button variant="brand" label="Show" onclick={showHandler}></lightning-button>
+        <div>
+            <template if:true={showVal}>
+                <p>The username is : {username}</p>
+                <p>The password is : {pswrd}</p>
+        </template>
+        </div>
+    </lightning-card>
+</template>

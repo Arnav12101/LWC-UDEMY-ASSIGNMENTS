@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Third assignment">
+        <lightning-input type="text" label = "Enter first number" onchange={takenumone}></lightning-input>
+        <lightning-input type="text" label = "Enter second number" onchange={takenumtwo}></lightning-input>
+        <lightning-button variant="brand" label="calculate" onclick={clickHandler}></lightning-button>
+
+        <template if:true={showval}>
+            <p>Sum of {firstnum} and {secondnum} is {sum}</p>
+        </template>
+
+        <br>
+        <br>
+
+        <div>
+            <lightning-button variant="brand" label=SHOW onclick={showHideImg}></lightning-button>
+
+                <lightning-button variant="brand" label='HIDE' onclick={hideImg}></lightning-button>
+        </div>
+        <template if:true={showImage}>
+            <img src='https://media.istockphoto.com/id/854904700/photo/bad-cat-licked-all-cream.jpg?s=1024x1024&w=is&k=20&c=qTH_56WAdoeY3WSLGm6J49Wh74bO3_dtkG8ODXdkkYY=' height="200px" width="200px" alt="catto"/>
+        </template>
+
+
+        <br>
+        <br>
+
+        <lightning-input type="number" label="Enter number" onchange={takeNumber}></lightning-input>
+        <lightning-button variant="brand" label="Check type" onclick={showAns}></lightning-button>
+        <p>The answer is -> {ans}</p>
+
+
+        <br>
+        <br>
+
+        <lightning-input label="Enter your name to get greeted" onchange={takeName}></lightning-input>
+        <lightning-button variant="brand" label="Greet" onclick={greetHandler}></lightning-button>
+
+        <template if:true={showName}>
+            <p>Greetings, {usersName}</p>
+        </template>
+
+        <br>
+        <br>
+
+        <lightning-input label="Enter the temprature in celsius" onchange={takeTemp}></lightning-input>
+        <lightning-button label="Convert to Farenhiet" onclick={showtempresult}></lightning-button>
+        <template if:true={showtemp}>
+            <p>The temprature in celcius is : {tempInFar}</p>
+        </template>
+    </lightning-card>
+</template>

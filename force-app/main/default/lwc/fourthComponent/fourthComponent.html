@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Intermediate section assignments">
+        <lightning-card title="First question">
+            <template if:true={message}>
+                <p>{message}</p>
+            </template>
+                
+            <ul>
+                <template for:each={namesarray} for:item="name">
+                    <li key={name}>{name}</li>
+                </template>
+            </ul>
+
+            <div>
+                <img src={imgURL} alt="apiImage">
+            </div>
+        </lightning-card>
+    </lightning-card>
+</template>
